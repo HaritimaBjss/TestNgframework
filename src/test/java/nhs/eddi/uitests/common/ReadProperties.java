@@ -7,11 +7,12 @@ import java.util.Properties;
 
 public class ReadProperties {
   Properties prop = new Properties();
+  private static ReadProperties properties = new ReadProperties();
 
   /** read the properties file.
      *
   */
-  public ReadProperties() {
+  private ReadProperties() {
     try {
       InputStream prop =
           new FileInputStream("src/test/java/nhs/eddi/uitests/resources/selenium.properties");
@@ -19,6 +20,10 @@ public class ReadProperties {
     } catch (IOException ex) {
       ex.printStackTrace();
     }
+  }
+
+  public static ReadProperties getInstance() {
+    return properties;
   }
 
   public String getLoginUrl() {

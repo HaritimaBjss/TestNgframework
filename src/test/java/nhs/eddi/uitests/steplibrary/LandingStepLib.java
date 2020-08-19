@@ -6,10 +6,10 @@ import nhs.eddi.uitests.pageobjects.LandingPage;
 
 public class LandingStepLib {
   private static LandingStepLib landingStepLib = new LandingStepLib();
-  private LandingPage landingPage= new LandingPage();
-  private ReadProperties readProperties = new ReadProperties();
+  private LandingPage landingPage;
 
-  private LandingStepLib(){
+  private LandingStepLib() {
+    landingPage = LandingPage.getInstance();
   }
 
   public static LandingStepLib getInstance() {
@@ -17,7 +17,7 @@ public class LandingStepLib {
   }
 
   public void launchGoogle() {
-    landingPage.getUrl(readProperties.getLoginUrl());
+    landingPage.getUrl(ReadProperties.getInstance().getLoginUrl());
   }
 
   public void searchText(String bjss) {

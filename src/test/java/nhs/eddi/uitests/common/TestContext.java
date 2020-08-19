@@ -8,8 +8,7 @@ public class TestContext {
 
   private TestContext() {
     if (webDriver == null) {
-      DriverSetup driverSetup = new DriverSetup();
-      webDriver = driverSetup.getDriver();
+      webDriver = DriverSetup.getInstance().getDriver();
     }
   }
 

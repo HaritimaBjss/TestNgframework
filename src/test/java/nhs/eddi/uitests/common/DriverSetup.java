@@ -15,6 +15,15 @@ import org.slf4j.LoggerFactory;
 
 public class DriverSetup {
   private static final Logger LOGGER = LoggerFactory.getLogger(DriverSetup.class);
+  private static DriverSetup driverSetup = new DriverSetup();
+
+  private DriverSetup() {
+
+  }
+
+  public static DriverSetup getInstance() {
+    return driverSetup;
+  }
 
   public WebDriver getDriver() {
     try {

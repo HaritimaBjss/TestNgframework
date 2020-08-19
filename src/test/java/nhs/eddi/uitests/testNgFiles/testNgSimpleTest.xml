@@ -8,4 +8,7 @@
                     name="nhs.eddi.uitests.testfiles.Hooks" />
         </classes>
     </test>
+    <listeners>
+        <listener class-name="nhs.eddi.uitests.common.TestListener"/>
+    </listeners>
 </suite>
