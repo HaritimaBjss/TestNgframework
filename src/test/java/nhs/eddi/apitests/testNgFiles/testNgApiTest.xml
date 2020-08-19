@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API RegressionTest" parallel="false">
+    <test name="regressionTest">
+        <classes>
+            <class
+                    name="nhs.eddi.apitests.testfiles.CountrySearchTests" />
+        </classes>
+    </test>
+</suite>

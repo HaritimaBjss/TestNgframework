@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="RegressionTest" parallel="false">
+    <test name="regressionTest">
+        <classes>
+            <class
+                    name="nhs.eddi.uitests.testfiles.SimpleTest" />
+            <class
+                    name="nhs.eddi.uitests.testfiles.Hooks" />
+        </classes>
+    </test>
+</suite>
